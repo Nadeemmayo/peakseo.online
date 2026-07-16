@@ -16,101 +16,98 @@
 
   <style>
     html { scroll-behavior: smooth; }
-    body { background:#F4F6FA; color:#0B1E3D; font-family:'Manrope',sans-serif; overflow-x:hidden; }
+    body { background:#4A0E0E; color:#FDF4E3; font-family:'Manrope',sans-serif; overflow-x:hidden; }
     h1,h2,h3,.display{ font-family:'Cormorant Garamond',serif; }
 
     .hero-bg{
       background:
-      radial-gradient(circle at top left, rgba(11,30,61,.14), transparent 32%),
-      radial-gradient(circle at bottom right, rgba(185,28,60,.14), transparent 38%),
-      linear-gradient(135deg,#F4F6FA 0%,#FBFCFE 45%,#EDF1F7 100%);
+      radial-gradient(circle at top left, rgba(255,201,60,.18), transparent 32%),
+      radial-gradient(circle at bottom right, rgba(230,57,70,.22), transparent 38%),
+      linear-gradient(135deg,#4A0E0E 0%,#5C1414 45%,#3A0A0A 100%);
     }
 
-    .dark-bg{ background:linear-gradient(150deg,#081530 0%,#0B1E3D 55%,#122A52 100%); }
+    .dark-bg{ background:linear-gradient(150deg,#2B0808 0%,#4A0E0E 55%,#611414 100%); }
 
-    .crimson-text{color:#B91C3C;}
-    .gold-text{color:#D4AF37;}
-    .navy-text{color:#0B1E3D;}
-    .deep-text{color:#0B1E3D;}
-    .ivory-text{color:#F4F6FA;}
+    .gold-text{color:#FFC93C;}
+    .crimson-text{color:#FF6B6B;}
+    .ivory-text{color:#FDF4E3;}
+    .deep-text{color:#FDF4E3;}
 
     .glass-card{
-      background:rgba(255,255,255,.85);
-      border:1px solid rgba(11,30,61,.14);
-      backdrop-filter:blur(14px);
-      box-shadow:0 24px 70px rgba(11,30,61,.10);
-    }
-
-    .glass-dark{
-      background:rgba(255,255,255,.06);
-      border:1px solid rgba(212,175,55,.22);
+      background:rgba(255,201,60,.06);
+      border:1px solid rgba(255,201,60,.28);
       backdrop-filter:blur(14px);
       box-shadow:0 24px 70px rgba(0,0,0,.35);
     }
 
+    .glass-dark{
+      background:rgba(255,201,60,.05);
+      border:1px solid rgba(255,201,60,.22);
+      backdrop-filter:blur(14px);
+      box-shadow:0 24px 70px rgba(0,0,0,.40);
+    }
+
     .main-btn{
-      background:linear-gradient(135deg,#B91C3C,#D4AF37);
-      color:#F4F6FA;
-      font-weight:700;
+      background:linear-gradient(135deg,#E63946,#FFC93C);
+      color:#2B0808;
+      font-weight:800;
       border-radius:4px;
       padding:14px 32px;
       display:inline-block;
       transition:.3s;
-      box-shadow:0 16px 35px rgba(185,28,60,.28);
+      box-shadow:0 16px 35px rgba(230,57,70,.35);
       letter-spacing:.5px;
     }
     .main-btn:hover{transform:scale(1.05);}
 
     .outline-btn{
-      border:1.5px solid #0B1E3D;
-      color:#0B1E3D;
-      font-weight:700;
+      border:1.5px solid #FFC93C;
+      color:#FFC93C;
+      font-weight:800;
       border-radius:4px;
       padding:14px 32px;
       display:inline-block;
       transition:.3s;
-      background:#fff;
+      background:rgba(255,201,60,.06);
       letter-spacing:.5px;
     }
-    .outline-btn:hover{background:#0B1E3D;color:#F4F6FA;}
+    .outline-btn:hover{background:#FFC93C;color:#2B0808;}
 
     .logo-mark{
       width:46px;height:46px;border-radius:4px;
-      background:linear-gradient(135deg,#0B1E3D,#B91C3C);
-      color:#D4AF37;
+      background:linear-gradient(135deg,#E63946,#FFC93C);
+      color:#2B0808;
       display:inline-flex;align-items:center;justify-content:center;
-      font-weight:700;margin-right:10px;font-family:'Cormorant Garamond',serif;font-size:20px;
-      border:1px solid rgba(212,175,55,.4);
+      font-weight:800;margin-right:10px;font-family:'Cormorant Garamond',serif;font-size:20px;
     }
 
     .service-card{
-      background:#fff;
-      border:1px solid rgba(11,30,61,.12);
+      background:rgba(255,201,60,.05);
+      border:1px solid rgba(255,201,60,.22);
       border-radius:6px;
       padding:34px;
       transition:.35s;
-      box-shadow:0 18px 45px rgba(11,30,61,.07);
+      box-shadow:0 18px 45px rgba(0,0,0,.25);
     }
     .service-card:hover{
       transform:translateY(-8px);
-      border-color:#D4AF37;
-      box-shadow:0 28px 70px rgba(212,175,55,.20);
+      border-color:#FFC93C;
+      box-shadow:0 28px 70px rgba(255,201,60,.20);
     }
 
     .icon-box{
       width:60px;height:60px;border-radius:4px;
       display:flex;align-items:center;justify-content:center;
-      background:linear-gradient(135deg,#0B1E3D,#B91C3C);
-      color:#D4AF37;
+      background:linear-gradient(135deg,#E63946,#FFC93C);
+      color:#2B0808;
       font-size:24px;
       margin-bottom:22px;
-      border:1px solid rgba(212,175,55,.3);
     }
 
     .floating-contact{position:fixed;bottom:22px;right:22px;z-index:9999;}
     .contact-options{display:none;flex-direction:column;gap:10px;margin-bottom:12px;}
     .floating-contact:hover .contact-options{display:flex;}
-    .float-btn{width:52px;height:52px;border-radius:4px;display:flex;align-items:center;justify-content:center;color:white;box-shadow:0 12px 28px rgba(0,0,0,.35);transition:.3s;}
+    .float-btn{width:52px;height:52px;border-radius:4px;display:flex;align-items:center;justify-content:center;color:#2B0808;box-shadow:0 12px 28px rgba(0,0,0,.40);transition:.3s;}
     .float-btn:hover{transform:scale(1.12);}
 
     .mobile-menu{display:none;}
@@ -119,18 +116,18 @@
     @media(max-width:768px){
       .desktop-menu{display:none!important;}
       .mobile-menu{
-        background:#F4F6FA;
+        background:#4A0E0E;
         padding:18px 24px;
-        border-top:1px solid rgba(11,30,61,.16);
+        border-top:1px solid rgba(255,201,60,.22);
       }
       .mobile-menu a{
         display:block;
         padding:12px 0;
-        color:#0B1E3D;
+        color:#FDF4E3;
         font-weight:bold;
         text-transform:uppercase;
         font-size:13px;
-        border-bottom:1px solid rgba(11,30,61,.08);
+        border-bottom:1px solid rgba(255,201,60,.14);
       }
     }
   </style>
@@ -138,25 +135,25 @@
 
 <body>
 
-<nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-xl border-b" style="border-color:rgba(11,30,61,.14);">
+<nav class="sticky top-0 z-50 backdrop-blur-xl border-b" style="background:rgba(74,14,14,.92);border-color:rgba(255,201,60,.22);">
   <div class="max-w-7xl mx-auto flex justify-between items-center p-4">
-    <a href="index.html" class="text-2xl font-semibold deep-text flex items-center display">
+    <a href="index.html" class="text-2xl font-semibold flex items-center display ivory-text">
       <span class="logo-mark">P</span>
-      PEAK<span class="crimson-text">SEO</span>
+      PEAK<span class="gold-text">SEO</span>
     </a>
 
     <div class="desktop-menu hidden md:flex gap-5 font-bold text-xs uppercase items-center tracking-wide">
-      <a href="index.html" class="crimson-text">Home</a>
-      <a href="about.html" class="hover:text-[#B91C3C]">About</a>
-      <a href="services.html" class="hover:text-[#B91C3C]">Services</a>
-      <a href="portfolio.html" class="hover:text-[#B91C3C]">Portfolio</a>
-      <a href="all-niches-sites.html" class="hover:text-[#B91C3C]">All Niches</a>
-      <a href="blog.html" class="hover:text-[#B91C3C]">Blog</a>
-      <a href="FAQs.html" class="hover:text-[#B91C3C]">FAQ</a>
+      <a href="index.html" class="gold-text">Home</a>
+      <a href="about.html" class="ivory-text hover:text-[#FFC93C]">About</a>
+      <a href="services.html" class="ivory-text hover:text-[#FFC93C]">Services</a>
+      <a href="portfolio.html" class="ivory-text hover:text-[#FFC93C]">Portfolio</a>
+      <a href="all-niches-sites.html" class="ivory-text hover:text-[#FFC93C]">All Niches</a>
+      <a href="blog.html" class="ivory-text hover:text-[#FFC93C]">Blog</a>
+      <a href="FAQs.html" class="ivory-text hover:text-[#FFC93C]">FAQ</a>
       <a href="contact.html" class="main-btn text-sm px-5 py-2">Contact</a>
     </div>
 
-    <button class="mobile-menu-btn deep-text text-3xl font-bold md:hidden" type="button">☰</button>
+    <button class="mobile-menu-btn ivory-text text-3xl font-bold md:hidden" type="button">☰</button>
   </div>
 
   <div class="mobile-menu">
@@ -174,15 +171,15 @@
 <header class="hero-bg py-28 px-6">
   <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
     <div>
-      <span class="inline-block border text-xs font-bold uppercase tracking-[4px] px-5 py-2 rounded-full mb-6" style="border-color:rgba(11,30,61,.28);color:#0B1E3D;background:rgba(255,255,255,.75);">
+      <span class="inline-block border text-xs font-bold uppercase tracking-[4px] px-5 py-2 rounded-full mb-6" style="border-color:rgba(255,201,60,.4);color:#FFC93C;background:rgba(255,201,60,.08);">
         Premium Link Building & Guest Posting
       </span>
 
-      <h1 class="text-4xl md:text-6xl font-semibold leading-tight mb-6 deep-text display">
+      <h1 class="text-4xl md:text-6xl font-semibold leading-tight mb-6 ivory-text display">
         Reach The <span class="crimson-text">Peak Of Search Rankings</span>
       </h1>
 
-      <p class="text-[#2C3E5C] text-lg md:text-xl max-w-3xl mb-10 leading-8">
+      <p class="text-[#F0DFC4] text-lg md:text-xl max-w-3xl mb-10 leading-8">
         PeakSEO helps businesses and agencies grow organic visibility with premium guest posting, niche edits, authority backlinks, SEO content and white-hat off-page SEO campaigns.
       </p>
 
@@ -192,24 +189,24 @@
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-2xl">
-        <a href="portfolio.html" class="glass-card rounded p-5 font-bold hover:scale-105 transition">🏆 View Portfolio</a>
-        <a href="all-niches-sites.html" class="glass-card rounded p-5 font-bold hover:scale-105 transition">🚀 Browse All Niches</a>
+        <a href="portfolio.html" class="glass-card rounded p-5 font-bold hover:scale-105 transition ivory-text">🏆 View Portfolio</a>
+        <a href="all-niches-sites.html" class="glass-card rounded p-5 font-bold hover:scale-105 transition ivory-text">🚀 Browse All Niches</a>
       </div>
     </div>
 
     <div class="glass-card rounded p-8">
       <p class="uppercase tracking-[4px] gold-text font-bold text-sm mb-4">The Summit Standard</p>
-      <h2 class="text-4xl font-semibold deep-text mb-6 display">SEO Growth System</h2>
+      <h2 class="text-4xl font-semibold ivory-text mb-6 display">SEO Growth System</h2>
 
       <div class="grid grid-cols-2 gap-4 mb-6">
-        <div class="rounded p-5 bg-white border" style="border-color:rgba(11,30,61,.14);"><h3 class="text-3xl font-semibold crimson-text display">50K+</h3><p class="text-gray-600 text-sm">Websites Access</p></div>
-        <div class="rounded p-5 bg-white border" style="border-color:rgba(11,30,61,.14);"><h3 class="text-3xl font-semibold crimson-text display">200+</h3><p class="text-gray-600 text-sm">Campaigns</p></div>
-        <div class="rounded p-5 bg-white border" style="border-color:rgba(11,30,61,.14);"><h3 class="text-3xl font-semibold crimson-text display">20+</h3><p class="text-gray-600 text-sm">Niches</p></div>
-        <div class="rounded p-5 bg-white border" style="border-color:rgba(11,30,61,.14);"><h3 class="text-3xl font-semibold crimson-text display">Global</h3><p class="text-gray-600 text-sm">Outreach</p></div>
+        <div class="rounded p-5 border" style="background:rgba(255,201,60,.05);border-color:rgba(255,201,60,.22);"><h3 class="text-3xl font-semibold crimson-text display">50K+</h3><p class="text-[#E8CFAE] text-sm">Websites Access</p></div>
+        <div class="rounded p-5 border" style="background:rgba(255,201,60,.05);border-color:rgba(255,201,60,.22);"><h3 class="text-3xl font-semibold crimson-text display">200+</h3><p class="text-[#E8CFAE] text-sm">Campaigns</p></div>
+        <div class="rounded p-5 border" style="background:rgba(255,201,60,.05);border-color:rgba(255,201,60,.22);"><h3 class="text-3xl font-semibold crimson-text display">20+</h3><p class="text-[#E8CFAE] text-sm">Niches</p></div>
+        <div class="rounded p-5 border" style="background:rgba(255,201,60,.05);border-color:rgba(255,201,60,.22);"><h3 class="text-3xl font-semibold crimson-text display">Global</h3><p class="text-[#E8CFAE] text-sm">Outreach</p></div>
       </div>
 
-      <div class="rounded p-6 text-white" style="background:linear-gradient(135deg,#0B1E3D,#B91C3C);">
-        <p class="font-medium leading-7">Relevant websites, safe anchors, clean reporting and real ranking-focused execution.</p>
+      <div class="rounded p-6" style="background:linear-gradient(135deg,#E63946,#FFC93C);">
+        <p class="font-medium leading-7" style="color:#2B0808;">Relevant websites, safe anchors, clean reporting and real ranking-focused execution.</p>
       </div>
     </div>
   </div>
@@ -221,12 +218,12 @@
       <div class="grid lg:grid-cols-[320px_1fr] gap-10 items-center">
         <div class="text-center">
           <div class="relative inline-block">
-            <div class="absolute inset-0 rounded-full bg-[#D4AF37] blur-3xl opacity-15"></div>
-            <div class="relative w-72 h-72 mx-auto rounded-full p-[5px]" style="background:linear-gradient(135deg,#B91C3C,#D4AF37);">
+            <div class="absolute inset-0 rounded-full bg-[#FFC93C] blur-3xl opacity-20"></div>
+            <div class="relative w-72 h-72 mx-auto rounded-full p-[5px]" style="background:linear-gradient(135deg,#E63946,#FFC93C);">
               <img src="https://raw.githubusercontent.com/Nadeemmayo/offpageseoexpert.com/main/WhatsApp%20Image%202026-04-07%20at%205.28.39%20AM.jpeg"
                    alt="Nadeem Mayo"
                    class="w-full h-full rounded-full object-cover object-top"
-                   style="border:5px solid #081530;">
+                   style="border:5px solid #2B0808;">
             </div>
           </div>
         </div>
@@ -235,19 +232,19 @@
           <p class="uppercase tracking-[5px] gold-text font-bold text-sm mb-3">Meet The Founder</p>
           <h2 class="text-5xl lg:text-6xl font-semibold ivory-text mb-4 display">Nadeem Mayo</h2>
 
-          <span class="inline-block px-7 py-3 rounded-full font-bold text-sm mb-6" style="background:#D4AF37;color:#0B1E3D;">
+          <span class="inline-block px-7 py-3 rounded-full font-bold text-sm mb-6" style="background:#FFC93C;color:#2B0808;">
             Founder • PeakSEO Agency
           </span>
 
-          <p class="text-[#D8DEE9] text-lg leading-8 max-w-3xl mb-8">
+          <p class="text-[#F0DFC4] text-lg leading-8 max-w-3xl mb-8">
             Helping agencies, brands and businesses scale through premium guest posting, authority backlinks, niche edits and strategic off-page SEO campaigns designed for long-term organic growth.
           </p>
 
           <div class="flex flex-wrap gap-4">
-            <a href="https://www.linkedin.com/in/menadeemmayo" target="_blank" class="w-14 h-14 rounded flex items-center justify-center text-white text-xl hover:scale-110 transition" style="background:#0077B5;"><i class="fab fa-linkedin-in"></i></a>
-            <a href="https://www.facebook.com/share/19aDt6pcgh/" target="_blank" class="w-14 h-14 rounded flex items-center justify-center text-white text-xl hover:scale-110 transition" style="background:#1877F2;"><i class="fab fa-facebook-f"></i></a>
-            <a href="https://wa.me/923074646927" target="_blank" class="w-14 h-14 rounded flex items-center justify-center text-white text-xl hover:scale-110 transition" style="background:#25D366;"><i class="fab fa-whatsapp"></i></a>
-            <a href="mailto:ceo@peakseo.online" class="w-14 h-14 rounded flex items-center justify-center text-white text-xl hover:scale-110 transition" style="background:#B91C3C;"><i class="fas fa-envelope"></i></a>
+            <a href="https://www.linkedin.com/in/menadeemmayo" target="_blank" class="w-14 h-14 rounded flex items-center justify-center text-[#2B0808] text-xl hover:scale-110 transition" style="background:#FFC93C;"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.facebook.com/share/19aDt6pcgh/" target="_blank" class="w-14 h-14 rounded flex items-center justify-center text-[#2B0808] text-xl hover:scale-110 transition" style="background:#FFC93C;"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://wa.me/923074646927" target="_blank" class="w-14 h-14 rounded flex items-center justify-center text-[#2B0808] text-xl hover:scale-110 transition" style="background:#FFC93C;"><i class="fab fa-whatsapp"></i></a>
+            <a href="mailto:ceo@peakseo.online" class="w-14 h-14 rounded flex items-center justify-center text-[#2B0808] text-xl hover:scale-110 transition" style="background:#E63946;"><i class="fas fa-envelope"></i></a>
             <a href="contact.html" class="main-btn ml-2">Work With Me</a>
           </div>
         </div>
@@ -256,25 +253,25 @@
   </div>
 </section>
 
-<section class="py-20 px-6 bg-white text-gray-900">
+<section class="py-20 px-6 dark-bg">
   <div class="max-w-7xl mx-auto">
     <div class="text-center mb-14">
       <p class="uppercase tracking-[3px] text-sm font-bold gold-text mb-3">Our Premium Services</p>
-      <h2 class="text-4xl md:text-5xl font-semibold mb-4 deep-text display">
+      <h2 class="text-4xl md:text-5xl font-semibold mb-4 ivory-text display">
         SEO Services Built For <span class="crimson-text">Authority Growth</span>
       </h2>
-      <p class="text-gray-600 max-w-3xl mx-auto">
+      <p class="text-[#E8CFAE] max-w-3xl mx-auto">
         Complete off-page SEO, guest posting, content and backlink solutions to grow trust, rankings and organic traffic.
       </p>
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-      <div class="service-card"><div class="icon-box"><i class="fas fa-newspaper"></i></div><h3 class="text-2xl font-semibold mb-3 display">Guest Posting</h3><p class="text-gray-600 mb-5">Publish SEO-friendly articles on relevant websites with quality backlinks and live URL reporting.</p><ul class="text-sm text-gray-700 space-y-2"><li>✔ Real websites</li><li>✔ Niche relevant blogs</li><li>✔ Traffic-based placements</li></ul></div>
-      <div class="service-card"><div class="icon-box"><i class="fas fa-link"></i></div><h3 class="text-2xl font-semibold mb-3 display">Link Building</h3><p class="text-gray-600 mb-5">High-quality backlinks from trusted websites to improve authority, rankings and visibility.</p><ul class="text-sm text-gray-700 space-y-2"><li>✔ Authority backlinks</li><li>✔ Contextual links</li><li>✔ Manual outreach</li></ul></div>
-      <div class="service-card"><div class="icon-box"><i class="fas fa-chart-line"></i></div><h3 class="text-2xl font-semibold mb-3 display">Niche Edits</h3><p class="text-gray-600 mb-5">Contextual backlinks placed inside existing indexed articles for faster authority building.</p><ul class="text-sm text-gray-700 space-y-2"><li>✔ Indexed pages</li><li>✔ Relevant content</li><li>✔ Natural placement</li></ul></div>
-      <div class="service-card"><div class="icon-box"><i class="fas fa-pen-fancy"></i></div><h3 class="text-2xl font-semibold mb-3 display">Content Writing</h3><p class="text-gray-600 mb-5">Human-written SEO content for guest posts, blogs, landing pages and ranking campaigns.</p><ul class="text-sm text-gray-700 space-y-2"><li>✔ SEO optimized</li><li>✔ Human readable</li><li>✔ Guest post ready</li></ul></div>
-      <div class="service-card"><div class="icon-box"><i class="fas fa-search"></i></div><h3 class="text-2xl font-semibold mb-3 display">Complete SEO</h3><p class="text-gray-600 mb-5">On-page, off-page, technical SEO, content and backlink strategy for long-term growth.</p><ul class="text-sm text-gray-700 space-y-2"><li>✔ SEO audit</li><li>✔ Ranking strategy</li><li>✔ Growth plan</li></ul></div>
-      <div class="service-card"><div class="icon-box"><i class="fas fa-map-marker-alt"></i></div><h3 class="text-2xl font-semibold mb-3 display">Local SEO</h3><p class="text-gray-600 mb-5">Local citations, authority links and business visibility optimization for local ranking growth.</p><ul class="text-sm text-gray-700 space-y-2"><li>✔ Maps ranking</li><li>✔ Local citations</li><li>✔ Local backlinks</li></ul></div>
+      <div class="service-card"><div class="icon-box"><i class="fas fa-newspaper"></i></div><h3 class="text-2xl font-semibold mb-3 display ivory-text">Guest Posting</h3><p class="text-[#E8CFAE] mb-5">Publish SEO-friendly articles on relevant websites with quality backlinks and live URL reporting.</p><ul class="text-sm text-[#E8CFAE] space-y-2"><li>✔ Real websites</li><li>✔ Niche relevant blogs</li><li>✔ Traffic-based placements</li></ul></div>
+      <div class="service-card"><div class="icon-box"><i class="fas fa-link"></i></div><h3 class="text-2xl font-semibold mb-3 display ivory-text">Link Building</h3><p class="text-[#E8CFAE] mb-5">High-quality backlinks from trusted websites to improve authority, rankings and visibility.</p><ul class="text-sm text-[#E8CFAE] space-y-2"><li>✔ Authority backlinks</li><li>✔ Contextual links</li><li>✔ Manual outreach</li></ul></div>
+      <div class="service-card"><div class="icon-box"><i class="fas fa-chart-line"></i></div><h3 class="text-2xl font-semibold mb-3 display ivory-text">Niche Edits</h3><p class="text-[#E8CFAE] mb-5">Contextual backlinks placed inside existing indexed articles for faster authority building.</p><ul class="text-sm text-[#E8CFAE] space-y-2"><li>✔ Indexed pages</li><li>✔ Relevant content</li><li>✔ Natural placement</li></ul></div>
+      <div class="service-card"><div class="icon-box"><i class="fas fa-pen-fancy"></i></div><h3 class="text-2xl font-semibold mb-3 display ivory-text">Content Writing</h3><p class="text-[#E8CFAE] mb-5">Human-written SEO content for guest posts, blogs, landing pages and ranking campaigns.</p><ul class="text-sm text-[#E8CFAE] space-y-2"><li>✔ SEO optimized</li><li>✔ Human readable</li><li>✔ Guest post ready</li></ul></div>
+      <div class="service-card"><div class="icon-box"><i class="fas fa-search"></i></div><h3 class="text-2xl font-semibold mb-3 display ivory-text">Complete SEO</h3><p class="text-[#E8CFAE] mb-5">On-page, off-page, technical SEO, content and backlink strategy for long-term growth.</p><ul class="text-sm text-[#E8CFAE] space-y-2"><li>✔ SEO audit</li><li>✔ Ranking strategy</li><li>✔ Growth plan</li></ul></div>
+      <div class="service-card"><div class="icon-box"><i class="fas fa-map-marker-alt"></i></div><h3 class="text-2xl font-semibold mb-3 display ivory-text">Local SEO</h3><p class="text-[#E8CFAE] mb-5">Local citations, authority links and business visibility optimization for local ranking growth.</p><ul class="text-sm text-[#E8CFAE] space-y-2"><li>✔ Maps ranking</li><li>✔ Local citations</li><li>✔ Local backlinks</li></ul></div>
     </div>
   </div>
 </section>
@@ -286,7 +283,7 @@
       <h2 class="text-4xl md:text-5xl font-semibold mb-6 ivory-text display">
         We Build Links That Support <span class="gold-text">Real SEO Growth</span>
       </h2>
-      <p class="text-[#D8DEE9] mb-7 leading-8">
+      <p class="text-[#F0DFC4] mb-7 leading-8">
         We focus on relevant websites, real traffic, clean metrics, natural anchor strategy and transparent link placement reports.
       </p>
 
@@ -302,7 +299,7 @@
 
     <div class="glass-dark rounded p-8">
       <h3 class="text-2xl font-semibold mb-5 gold-text display">Placement Quality Checklist</h3>
-      <ul class="space-y-4 text-[#D8DEE9]">
+      <ul class="space-y-4 text-[#F0DFC4]">
         <li>✔ Website niche relevance</li>
         <li>✔ Organic traffic quality</li>
         <li>✔ DR / DA and authority signals</li>
@@ -314,106 +311,106 @@
   </div>
 </section>
 
-<section class="py-20 px-6">
+<section class="py-20 px-6" style="background:#3A0A0A;">
   <div class="max-w-7xl mx-auto">
     <div class="text-center mb-14">
-      <h2 class="text-4xl md:text-5xl font-semibold mb-4 deep-text display">
+      <h2 class="text-4xl md:text-5xl font-semibold mb-4 ivory-text display">
         Simple <span class="crimson-text">Work Process</span>
       </h2>
-      <p class="text-[#2C3E5C] max-w-3xl mx-auto">
+      <p class="text-[#E8CFAE] max-w-3xl mx-auto">
         A clear process for guest posting, link building, SEO audit and authority growth.
       </p>
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-5 text-center">
-      <div class="glass-card rounded p-6"><div class="text-3xl font-semibold crimson-text mb-3 display">01</div><h3 class="font-bold mb-2">Audit</h3><p class="text-sm text-gray-600">We review your website.</p></div>
-      <div class="glass-card rounded p-6"><div class="text-3xl font-semibold crimson-text mb-3 display">02</div><h3 class="font-bold mb-2">Strategy</h3><p class="text-sm text-gray-600">We plan links and anchors.</p></div>
-      <div class="glass-card rounded p-6"><div class="text-3xl font-semibold crimson-text mb-3 display">03</div><h3 class="font-bold mb-2">Outreach</h3><p class="text-sm text-gray-600">We find quality websites.</p></div>
-      <div class="glass-card rounded p-6"><div class="text-3xl font-semibold crimson-text mb-3 display">04</div><h3 class="font-bold mb-2">Content</h3><p class="text-sm text-gray-600">We create SEO content.</p></div>
-      <div class="glass-card rounded p-6"><div class="text-3xl font-semibold crimson-text mb-3 display">05</div><h3 class="font-bold mb-2">Placement</h3><p class="text-sm text-gray-600">Links go live.</p></div>
-      <div class="glass-card rounded p-6"><div class="text-3xl font-semibold crimson-text mb-3 display">06</div><h3 class="font-bold mb-2">Report</h3><p class="text-sm text-gray-600">You receive URLs.</p></div>
+      <div class="glass-card rounded p-6"><div class="text-3xl font-semibold gold-text mb-3 display">01</div><h3 class="font-bold mb-2 ivory-text">Audit</h3><p class="text-sm text-[#E8CFAE]">We review your website.</p></div>
+      <div class="glass-card rounded p-6"><div class="text-3xl font-semibold gold-text mb-3 display">02</div><h3 class="font-bold mb-2 ivory-text">Strategy</h3><p class="text-sm text-[#E8CFAE]">We plan links and anchors.</p></div>
+      <div class="glass-card rounded p-6"><div class="text-3xl font-semibold gold-text mb-3 display">03</div><h3 class="font-bold mb-2 ivory-text">Outreach</h3><p class="text-sm text-[#E8CFAE]">We find quality websites.</p></div>
+      <div class="glass-card rounded p-6"><div class="text-3xl font-semibold gold-text mb-3 display">04</div><h3 class="font-bold mb-2 ivory-text">Content</h3><p class="text-sm text-[#E8CFAE]">We create SEO content.</p></div>
+      <div class="glass-card rounded p-6"><div class="text-3xl font-semibold gold-text mb-3 display">05</div><h3 class="font-bold mb-2 ivory-text">Placement</h3><p class="text-sm text-[#E8CFAE]">Links go live.</p></div>
+      <div class="glass-card rounded p-6"><div class="text-3xl font-semibold gold-text mb-3 display">06</div><h3 class="font-bold mb-2 ivory-text">Report</h3><p class="text-sm text-[#E8CFAE]">You receive URLs.</p></div>
     </div>
   </div>
 </section>
 
-<section class="py-20 px-6">
-  <div class="max-w-6xl mx-auto p-10 md:p-14 text-center rounded" style="background:linear-gradient(135deg,#0B1E3D,#B91C3C);color:#F4F6FA;">
-    <h2 class="text-4xl md:text-5xl font-semibold mb-5 display">Ready To Improve Your Website Authority?</h2>
-    <p class="text-lg max-w-3xl mx-auto mb-8 font-medium">
+<section class="py-20 px-6 dark-bg">
+  <div class="max-w-6xl mx-auto p-10 md:p-14 text-center rounded" style="background:linear-gradient(135deg,#E63946,#FFC93C);">
+    <h2 class="text-4xl md:text-5xl font-semibold mb-5 display" style="color:#2B0808;">Ready To Improve Your Website Authority?</h2>
+    <p class="text-lg max-w-3xl mx-auto mb-8 font-medium" style="color:#3A0A0A;">
       Share your website URL and target keywords. We will suggest the best guest posting, link building or SEO growth strategy.
     </p>
 
     <div class="flex justify-center gap-4 flex-wrap">
-      <a href="contact.html" class="bg-[#081530] text-white px-8 py-4 rounded font-bold hover:scale-105 transition">Contact Us</a>
-      <a href="services.html" class="bg-white text-[#0B1E3D] px-8 py-4 rounded font-bold hover:scale-105 transition">View Services</a>
-      <a href="FAQs.html" class="text-white px-8 py-4 rounded font-bold hover:scale-105 transition" style="background:rgba(8,21,48,.85);">Read FAQ</a>
+      <a href="contact.html" class="px-8 py-4 rounded font-bold hover:scale-105 transition" style="background:#2B0808;color:#FFC93C;">Contact Us</a>
+      <a href="services.html" class="px-8 py-4 rounded font-bold hover:scale-105 transition" style="background:#3A0A0A;color:#FDF4E3;">View Services</a>
+      <a href="FAQs.html" class="px-8 py-4 rounded font-bold hover:scale-105 transition" style="background:rgba(43,8,8,.85);color:#FDF4E3;">Read FAQ</a>
     </div>
   </div>
 </section>
 
 <div class="floating-contact">
   <div class="contact-options">
-    <a href="https://wa.me/923074646927" target="_blank" class="float-btn" style="background:#25D366;"><i class="fab fa-whatsapp text-2xl"></i></a>
-    <a href="mailto:ceo@peakseo.online" class="float-btn" style="background:#B91C3C;"><i class="fas fa-envelope text-2xl"></i></a>
-    <a href="https://t.me/Nadeemmayos" target="_blank" class="float-btn" style="background:#229ED9;"><i class="fab fa-telegram-plane text-2xl"></i></a>
-    <a href="https://www.linkedin.com/in/menadeemmayo/" target="_blank" class="float-btn" style="background:#0077B5;"><i class="fab fa-linkedin-in text-2xl"></i></a>
-    <a href="https://x.com/Nadeem_seo" target="_blank" class="float-btn" style="background:#081530;"><i class="fab fa-x-twitter text-2xl"></i></a>
+    <a href="https://wa.me/923074646927" target="_blank" class="float-btn" style="background:#FFC93C;"><i class="fab fa-whatsapp text-2xl"></i></a>
+    <a href="mailto:ceo@peakseo.online" class="float-btn" style="background:#E63946;color:#FDF4E3;"><i class="fas fa-envelope text-2xl"></i></a>
+    <a href="https://t.me/Nadeemmayos" target="_blank" class="float-btn" style="background:#FFC93C;"><i class="fab fa-telegram-plane text-2xl"></i></a>
+    <a href="https://www.linkedin.com/in/menadeemmayo/" target="_blank" class="float-btn" style="background:#FFC93C;"><i class="fab fa-linkedin-in text-2xl"></i></a>
+    <a href="https://x.com/Nadeem_seo" target="_blank" class="float-btn" style="background:#E63946;color:#FDF4E3;"><i class="fab fa-x-twitter text-2xl"></i></a>
   </div>
-  <button class="text-[#0B1E3D] w-16 h-16 rounded flex items-center justify-center shadow-2xl hover:rotate-12 transition" style="background:#D4AF37;">
+  <button class="w-16 h-16 rounded flex items-center justify-center shadow-2xl hover:rotate-12 transition" style="background:#FFC93C;color:#2B0808;">
     <i class="fas fa-comments text-3xl"></i>
   </button>
 </div>
 
-<footer class="pt-16 pb-8 px-6 text-white" style="background:#081530;border-top:1px solid rgba(212,175,55,.22);">
-  <div class="max-w-7xl mx-auto grid md:grid-cols-4 gap-10 border-b pb-12" style="border-color:rgba(212,175,55,.12);">
+<footer class="pt-16 pb-8 px-6" style="background:#2B0808;border-top:1px solid rgba(255,201,60,.25);">
+  <div class="max-w-7xl mx-auto grid md:grid-cols-4 gap-10 border-b pb-12" style="border-color:rgba(255,201,60,.14);">
 
     <div>
-      <h3 class="text-2xl font-semibold mb-5 display">PEAK<span class="crimson-text">SEO</span></h3>
-      <p class="text-[#D8DEE9] mb-5">Premium guest posting, link building, niche edits and authority backlink services for businesses worldwide.</p>
+      <h3 class="text-2xl font-semibold mb-5 display ivory-text">PEAK<span class="gold-text">SEO</span></h3>
+      <p class="text-[#E8CFAE] mb-5">Premium guest posting, link building, niche edits and authority backlink services for businesses worldwide.</p>
 
       <div class="flex gap-4 text-2xl mb-5">
-        <a href="https://www.linkedin.com/in/menadeemmayo" target="_blank" class="hover:text-[#D4AF37]"><i class="fab fa-linkedin"></i></a>
-        <a href="https://wa.me/923074646927" target="_blank" class="hover:text-green-400"><i class="fab fa-whatsapp"></i></a>
-        <a href="https://t.me/Nadeemmayos" target="_blank" class="hover:text-sky-400"><i class="fab fa-telegram"></i></a>
-        <a href="https://www.facebook.com/share/19aDt6pcgh/" target="_blank" class="hover:text-blue-400"><i class="fab fa-facebook"></i></a>
-        <a href="https://x.com/Nadeem_seo" target="_blank" class="hover:text-white"><i class="fab fa-x-twitter"></i></a>
+        <a href="https://www.linkedin.com/in/menadeemmayo" target="_blank" class="gold-text hover:text-[#FF6B6B]"><i class="fab fa-linkedin"></i></a>
+        <a href="https://wa.me/923074646927" target="_blank" class="gold-text hover:text-[#FF6B6B]"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://t.me/Nadeemmayos" target="_blank" class="gold-text hover:text-[#FF6B6B]"><i class="fab fa-telegram"></i></a>
+        <a href="https://www.facebook.com/share/19aDt6pcgh/" target="_blank" class="gold-text hover:text-[#FF6B6B]"><i class="fab fa-facebook"></i></a>
+        <a href="https://x.com/Nadeem_seo" target="_blank" class="gold-text hover:text-[#FF6B6B]"><i class="fab fa-x-twitter"></i></a>
       </div>
 
       <div class="flex flex-wrap gap-3">
-        <a href="https://www.fiverr.com/nadeem_mayo" target="_blank" class="bg-[#1dbf73] text-white text-sm font-bold py-2 px-4 rounded-md">Fiverr</a>
-        <a href="https://upwork.com/freelancers/~01929269c0cf45d7c1" target="_blank" class="bg-[#14a800] text-white text-sm font-bold py-2 px-4 rounded-md">Upwork</a>
+        <a href="https://www.fiverr.com/nadeem_mayo" target="_blank" class="text-sm font-bold py-2 px-4 rounded-md" style="background:#FFC93C;color:#2B0808;">Fiverr</a>
+        <a href="https://upwork.com/freelancers/~01929269c0cf45d7c1" target="_blank" class="text-sm font-bold py-2 px-4 rounded-md" style="background:#E63946;color:#FDF4E3;">Upwork</a>
       </div>
     </div>
 
     <div>
       <h3 class="text-xl font-bold mb-5 gold-text">Quick Links</h3>
-      <ul class="text-[#D8DEE9] space-y-3">
-        <li><a href="services.html" class="hover:text-[#D4AF37]">Services</a></li>
-        <li><a href="portfolio.html" class="hover:text-[#D4AF37]">Portfolio</a></li>
-        <li><a href="all-niches-sites.html" class="hover:text-[#D4AF37]">All Niches</a></li>
-        <li><a href="blog.html" class="hover:text-[#D4AF37]">Blog</a></li>
-        <li><a href="FAQs.html" class="hover:text-[#D4AF37]">FAQ</a></li>
-        <li><a href="contact.html" class="hover:text-[#D4AF37]">Order Now</a></li>
+      <ul class="text-[#E8CFAE] space-y-3">
+        <li><a href="services.html" class="hover:text-[#FFC93C]">Services</a></li>
+        <li><a href="portfolio.html" class="hover:text-[#FFC93C]">Portfolio</a></li>
+        <li><a href="all-niches-sites.html" class="hover:text-[#FFC93C]">All Niches</a></li>
+        <li><a href="blog.html" class="hover:text-[#FFC93C]">Blog</a></li>
+        <li><a href="FAQs.html" class="hover:text-[#FFC93C]">FAQ</a></li>
+        <li><a href="contact.html" class="hover:text-[#FFC93C]">Order Now</a></li>
       </ul>
     </div>
 
     <div>
       <h3 class="text-xl font-bold mb-5 gold-text">Legal</h3>
-      <ul class="text-[#D8DEE9] space-y-3">
-        <li><a href="privacy-policy.html" class="hover:text-[#D4AF37]">Privacy Policy</a></li>
-        <li><a href="terms-of-use.html" class="hover:text-[#D4AF37]">Terms of Use</a></li>
-        <li><a href="refund-policy.html" class="hover:text-[#D4AF37]">Refund Policy</a></li>
+      <ul class="text-[#E8CFAE] space-y-3">
+        <li><a href="privacy-policy.html" class="hover:text-[#FFC93C]">Privacy Policy</a></li>
+        <li><a href="terms-of-use.html" class="hover:text-[#FFC93C]">Terms of Use</a></li>
+        <li><a href="refund-policy.html" class="hover:text-[#FFC93C]">Refund Policy</a></li>
       </ul>
     </div>
 
     <div>
       <h3 class="text-xl font-bold mb-5 gold-text">Contact Info</h3>
 
-      <p class="text-[#D8DEE9] mb-3"><i class="fas fa-envelope mr-2 gold-text"></i><a href="mailto:ceo@peakseo.online" class="hover:text-[#D4AF37]">ceo@peakseo.online</a></p>
-      <p class="text-[#D8DEE9] mb-3"><i class="fas fa-envelope mr-2 gold-text"></i><a href="mailto:nadeemonlin@gmail.com" class="hover:text-[#D4AF37]">nadeemonlin@gmail.com</a></p>
-      <p class="text-[#D8DEE9] mb-6"><i class="fab fa-whatsapp mr-2 gold-text"></i><a href="https://wa.me/923074646927" target="_blank" class="hover:text-green-400">+92 307 4646927</a></p>
+      <p class="text-[#E8CFAE] mb-3"><i class="fas fa-envelope mr-2 gold-text"></i><a href="mailto:ceo@peakseo.online" class="hover:text-[#FFC93C]">ceo@peakseo.online</a></p>
+      <p class="text-[#E8CFAE] mb-3"><i class="fas fa-envelope mr-2 gold-text"></i><a href="mailto:nadeemonlin@gmail.com" class="hover:text-[#FFC93C]">nadeemonlin@gmail.com</a></p>
+      <p class="text-[#E8CFAE] mb-6"><i class="fab fa-whatsapp mr-2 gold-text"></i><a href="https://wa.me/923074646927" target="_blank" class="hover:text-[#FFC93C]">+92 307 4646927</a></p>
 
-      <p class="text-xs font-bold uppercase text-[#9AA6BB] mb-3 tracking-widest">We Accept</p>
+      <p class="text-xs font-bold uppercase text-[#C79A6B] mb-3 tracking-widest">We Accept</p>
       <div class="flex flex-wrap gap-3 items-center">
         <img src="https://img.icons8.com/color/96/paypal.png" alt="PayPal" class="h-7">
         <img src="https://img.icons8.com/color/96/payoneer.png" alt="Payoneer" class="h-7">
@@ -424,7 +421,7 @@
 
   </div>
 
-  <p class="text-center mt-8 text-[#9AA6BB] text-sm">© 2026 PeakSEO Agency. All Rights Reserved.</p>
+  <p class="text-center mt-8 text-[#C79A6B] text-sm">© 2026 PeakSEO Agency. All Rights Reserved.</p>
 </footer>
 
 <script>
