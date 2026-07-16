@@ -16,53 +16,54 @@
 
   <style>
     html { scroll-behavior: smooth; }
-    body { background:#FAF7F2; color:#161418; font-family:'Manrope',sans-serif; overflow-x:hidden; }
+    body { background:#F4F6FA; color:#0B1E3D; font-family:'Manrope',sans-serif; overflow-x:hidden; }
     h1,h2,h3,.display{ font-family:'Cormorant Garamond',serif; }
 
     .hero-bg{
       background:
-      radial-gradient(circle at top left, rgba(183,110,121,.18), transparent 32%),
-      radial-gradient(circle at bottom right, rgba(13,13,18,.12), transparent 38%),
-      linear-gradient(135deg,#FAF7F2 0%,#FDFBF7 45%,#F1E9DD 100%);
+      radial-gradient(circle at top left, rgba(11,30,61,.14), transparent 32%),
+      radial-gradient(circle at bottom right, rgba(185,28,60,.14), transparent 38%),
+      linear-gradient(135deg,#F4F6FA 0%,#FBFCFE 45%,#EDF1F7 100%);
     }
 
-    .dark-bg{ background:linear-gradient(150deg,#0D0D12 0%,#1C1720 55%,#2B1E28 100%); }
+    .dark-bg{ background:linear-gradient(150deg,#081530 0%,#0B1E3D 55%,#122A52 100%); }
 
-    .rose-text{color:#B76E79;}
-    .champagne-text{color:#C9A66B;}
-    .deep-text{color:#161418;}
-    .ivory-text{color:#FAF7F2;}
+    .crimson-text{color:#B91C3C;}
+    .gold-text{color:#D4AF37;}
+    .navy-text{color:#0B1E3D;}
+    .deep-text{color:#0B1E3D;}
+    .ivory-text{color:#F4F6FA;}
 
     .glass-card{
-      background:rgba(255,255,255,.82);
-      border:1px solid rgba(183,110,121,.20);
+      background:rgba(255,255,255,.85);
+      border:1px solid rgba(11,30,61,.14);
       backdrop-filter:blur(14px);
-      box-shadow:0 24px 70px rgba(22,20,24,.10);
+      box-shadow:0 24px 70px rgba(11,30,61,.10);
     }
 
     .glass-dark{
-      background:rgba(255,255,255,.05);
-      border:1px solid rgba(201,166,107,.22);
+      background:rgba(255,255,255,.06);
+      border:1px solid rgba(212,175,55,.22);
       backdrop-filter:blur(14px);
       box-shadow:0 24px 70px rgba(0,0,0,.35);
     }
 
     .main-btn{
-      background:linear-gradient(135deg,#B76E79,#C9A66B);
-      color:#161418;
+      background:linear-gradient(135deg,#B91C3C,#D4AF37);
+      color:#F4F6FA;
       font-weight:700;
       border-radius:4px;
       padding:14px 32px;
       display:inline-block;
       transition:.3s;
-      box-shadow:0 16px 35px rgba(183,110,121,.30);
+      box-shadow:0 16px 35px rgba(185,28,60,.28);
       letter-spacing:.5px;
     }
     .main-btn:hover{transform:scale(1.05);}
 
     .outline-btn{
-      border:1.5px solid #B76E79;
-      color:#B76E79;
+      border:1.5px solid #0B1E3D;
+      color:#0B1E3D;
       font-weight:700;
       border-radius:4px;
       padding:14px 32px;
@@ -71,39 +72,39 @@
       background:#fff;
       letter-spacing:.5px;
     }
-    .outline-btn:hover{background:#B76E79;color:#FAF7F2;}
+    .outline-btn:hover{background:#0B1E3D;color:#F4F6FA;}
 
     .logo-mark{
       width:46px;height:46px;border-radius:4px;
-      background:linear-gradient(135deg,#0D0D12,#B76E79);
-      color:#C9A66B;
+      background:linear-gradient(135deg,#0B1E3D,#B91C3C);
+      color:#D4AF37;
       display:inline-flex;align-items:center;justify-content:center;
       font-weight:700;margin-right:10px;font-family:'Cormorant Garamond',serif;font-size:20px;
-      border:1px solid rgba(201,166,107,.4);
+      border:1px solid rgba(212,175,55,.4);
     }
 
     .service-card{
       background:#fff;
-      border:1px solid rgba(183,110,121,.16);
+      border:1px solid rgba(11,30,61,.12);
       border-radius:6px;
       padding:34px;
       transition:.35s;
-      box-shadow:0 18px 45px rgba(22,20,24,.07);
+      box-shadow:0 18px 45px rgba(11,30,61,.07);
     }
     .service-card:hover{
       transform:translateY(-8px);
-      border-color:#C9A66B;
-      box-shadow:0 28px 70px rgba(201,166,107,.20);
+      border-color:#D4AF37;
+      box-shadow:0 28px 70px rgba(212,175,55,.20);
     }
 
     .icon-box{
       width:60px;height:60px;border-radius:4px;
       display:flex;align-items:center;justify-content:center;
-      background:linear-gradient(135deg,#0D0D12,#B76E79);
-      color:#C9A66B;
+      background:linear-gradient(135deg,#0B1E3D,#B91C3C);
+      color:#D4AF37;
       font-size:24px;
       margin-bottom:22px;
-      border:1px solid rgba(201,166,107,.3);
+      border:1px solid rgba(212,175,55,.3);
     }
 
     .floating-contact{position:fixed;bottom:22px;right:22px;z-index:9999;}
@@ -118,18 +119,18 @@
     @media(max-width:768px){
       .desktop-menu{display:none!important;}
       .mobile-menu{
-        background:#FAF7F2;
+        background:#F4F6FA;
         padding:18px 24px;
-        border-top:1px solid rgba(183,110,121,.18);
+        border-top:1px solid rgba(11,30,61,.16);
       }
       .mobile-menu a{
         display:block;
         padding:12px 0;
-        color:#161418;
+        color:#0B1E3D;
         font-weight:bold;
         text-transform:uppercase;
         font-size:13px;
-        border-bottom:1px solid rgba(183,110,121,.10);
+        border-bottom:1px solid rgba(11,30,61,.08);
       }
     }
   </style>
@@ -137,21 +138,21 @@
 
 <body>
 
-<nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-xl border-b" style="border-color:rgba(183,110,121,.18);">
+<nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-xl border-b" style="border-color:rgba(11,30,61,.14);">
   <div class="max-w-7xl mx-auto flex justify-between items-center p-4">
     <a href="index.html" class="text-2xl font-semibold deep-text flex items-center display">
       <span class="logo-mark">P</span>
-      PEAK<span class="rose-text">SEO</span>
+      PEAK<span class="crimson-text">SEO</span>
     </a>
 
     <div class="desktop-menu hidden md:flex gap-5 font-bold text-xs uppercase items-center tracking-wide">
-      <a href="index.html" class="rose-text">Home</a>
-      <a href="about.html" class="hover:text-[#B76E79]">About</a>
-      <a href="services.html" class="hover:text-[#B76E79]">Services</a>
-      <a href="portfolio.html" class="hover:text-[#B76E79]">Portfolio</a>
-      <a href="all-niches-sites.html" class="hover:text-[#B76E79]">All Niches</a>
-      <a href="blog.html" class="hover:text-[#B76E79]">Blog</a>
-      <a href="FAQs.html" class="hover:text-[#B76E79]">FAQ</a>
+      <a href="index.html" class="crimson-text">Home</a>
+      <a href="about.html" class="hover:text-[#B91C3C]">About</a>
+      <a href="services.html" class="hover:text-[#B91C3C]">Services</a>
+      <a href="portfolio.html" class="hover:text-[#B91C3C]">Portfolio</a>
+      <a href="all-niches-sites.html" class="hover:text-[#B91C3C]">All Niches</a>
+      <a href="blog.html" class="hover:text-[#B91C3C]">Blog</a>
+      <a href="FAQs.html" class="hover:text-[#B91C3C]">FAQ</a>
       <a href="contact.html" class="main-btn text-sm px-5 py-2">Contact</a>
     </div>
 
@@ -173,15 +174,15 @@
 <header class="hero-bg py-28 px-6">
   <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
     <div>
-      <span class="inline-block border text-xs font-bold uppercase tracking-[4px] px-5 py-2 rounded-full mb-6" style="border-color:rgba(183,110,121,.35);color:#B76E79;background:rgba(255,255,255,.7);">
+      <span class="inline-block border text-xs font-bold uppercase tracking-[4px] px-5 py-2 rounded-full mb-6" style="border-color:rgba(11,30,61,.28);color:#0B1E3D;background:rgba(255,255,255,.75);">
         Premium Link Building & Guest Posting
       </span>
 
       <h1 class="text-4xl md:text-6xl font-semibold leading-tight mb-6 deep-text display">
-        Reach The <span class="rose-text">Peak Of Search Rankings</span>
+        Reach The <span class="crimson-text">Peak Of Search Rankings</span>
       </h1>
 
-      <p class="text-[#3A3038] text-lg md:text-xl max-w-3xl mb-10 leading-8">
+      <p class="text-[#2C3E5C] text-lg md:text-xl max-w-3xl mb-10 leading-8">
         PeakSEO helps businesses and agencies grow organic visibility with premium guest posting, niche edits, authority backlinks, SEO content and white-hat off-page SEO campaigns.
       </p>
 
@@ -197,17 +198,17 @@
     </div>
 
     <div class="glass-card rounded p-8">
-      <p class="uppercase tracking-[4px] champagne-text font-bold text-sm mb-4">The Summit Standard</p>
+      <p class="uppercase tracking-[4px] gold-text font-bold text-sm mb-4">The Summit Standard</p>
       <h2 class="text-4xl font-semibold deep-text mb-6 display">SEO Growth System</h2>
 
       <div class="grid grid-cols-2 gap-4 mb-6">
-        <div class="rounded p-5 bg-white border" style="border-color:rgba(183,110,121,.18);"><h3 class="text-3xl font-semibold rose-text display">50K+</h3><p class="text-gray-600 text-sm">Websites Access</p></div>
-        <div class="rounded p-5 bg-white border" style="border-color:rgba(183,110,121,.18);"><h3 class="text-3xl font-semibold rose-text display">200+</h3><p class="text-gray-600 text-sm">Campaigns</p></div>
-        <div class="rounded p-5 bg-white border" style="border-color:rgba(183,110,121,.18);"><h3 class="text-3xl font-semibold rose-text display">20+</h3><p class="text-gray-600 text-sm">Niches</p></div>
-        <div class="rounded p-5 bg-white border" style="border-color:rgba(183,110,121,.18);"><h3 class="text-3xl font-semibold rose-text display">Global</h3><p class="text-gray-600 text-sm">Outreach</p></div>
+        <div class="rounded p-5 bg-white border" style="border-color:rgba(11,30,61,.14);"><h3 class="text-3xl font-semibold crimson-text display">50K+</h3><p class="text-gray-600 text-sm">Websites Access</p></div>
+        <div class="rounded p-5 bg-white border" style="border-color:rgba(11,30,61,.14);"><h3 class="text-3xl font-semibold crimson-text display">200+</h3><p class="text-gray-600 text-sm">Campaigns</p></div>
+        <div class="rounded p-5 bg-white border" style="border-color:rgba(11,30,61,.14);"><h3 class="text-3xl font-semibold crimson-text display">20+</h3><p class="text-gray-600 text-sm">Niches</p></div>
+        <div class="rounded p-5 bg-white border" style="border-color:rgba(11,30,61,.14);"><h3 class="text-3xl font-semibold crimson-text display">Global</h3><p class="text-gray-600 text-sm">Outreach</p></div>
       </div>
 
-      <div class="rounded p-6 text-white" style="background:linear-gradient(135deg,#0D0D12,#2B1E28);">
+      <div class="rounded p-6 text-white" style="background:linear-gradient(135deg,#0B1E3D,#B91C3C);">
         <p class="font-medium leading-7">Relevant websites, safe anchors, clean reporting and real ranking-focused execution.</p>
       </div>
     </div>
@@ -220,25 +221,25 @@
       <div class="grid lg:grid-cols-[320px_1fr] gap-10 items-center">
         <div class="text-center">
           <div class="relative inline-block">
-            <div class="absolute inset-0 rounded-full bg-[#C9A66B] blur-3xl opacity-15"></div>
-            <div class="relative w-72 h-72 mx-auto rounded-full p-[5px]" style="background:linear-gradient(135deg,#B76E79,#C9A66B);">
+            <div class="absolute inset-0 rounded-full bg-[#D4AF37] blur-3xl opacity-15"></div>
+            <div class="relative w-72 h-72 mx-auto rounded-full p-[5px]" style="background:linear-gradient(135deg,#B91C3C,#D4AF37);">
               <img src="https://raw.githubusercontent.com/Nadeemmayo/offpageseoexpert.com/main/WhatsApp%20Image%202026-04-07%20at%205.28.39%20AM.jpeg"
                    alt="Nadeem Mayo"
                    class="w-full h-full rounded-full object-cover object-top"
-                   style="border:5px solid #0D0D12;">
+                   style="border:5px solid #081530;">
             </div>
           </div>
         </div>
 
         <div>
-          <p class="uppercase tracking-[5px] champagne-text font-bold text-sm mb-3">Meet The Founder</p>
+          <p class="uppercase tracking-[5px] gold-text font-bold text-sm mb-3">Meet The Founder</p>
           <h2 class="text-5xl lg:text-6xl font-semibold ivory-text mb-4 display">Nadeem Mayo</h2>
 
-          <span class="inline-block px-7 py-3 rounded-full font-bold text-sm mb-6" style="background:#C9A66B;color:#161418;">
+          <span class="inline-block px-7 py-3 rounded-full font-bold text-sm mb-6" style="background:#D4AF37;color:#0B1E3D;">
             Founder • PeakSEO Agency
           </span>
 
-          <p class="text-[#E7DED6] text-lg leading-8 max-w-3xl mb-8">
+          <p class="text-[#D8DEE9] text-lg leading-8 max-w-3xl mb-8">
             Helping agencies, brands and businesses scale through premium guest posting, authority backlinks, niche edits and strategic off-page SEO campaigns designed for long-term organic growth.
           </p>
 
@@ -246,7 +247,7 @@
             <a href="https://www.linkedin.com/in/menadeemmayo" target="_blank" class="w-14 h-14 rounded flex items-center justify-center text-white text-xl hover:scale-110 transition" style="background:#0077B5;"><i class="fab fa-linkedin-in"></i></a>
             <a href="https://www.facebook.com/share/19aDt6pcgh/" target="_blank" class="w-14 h-14 rounded flex items-center justify-center text-white text-xl hover:scale-110 transition" style="background:#1877F2;"><i class="fab fa-facebook-f"></i></a>
             <a href="https://wa.me/923074646927" target="_blank" class="w-14 h-14 rounded flex items-center justify-center text-white text-xl hover:scale-110 transition" style="background:#25D366;"><i class="fab fa-whatsapp"></i></a>
-            <a href="mailto:ceo@peakseo.online" class="w-14 h-14 rounded flex items-center justify-center text-white text-xl hover:scale-110 transition" style="background:#B76E79;"><i class="fas fa-envelope"></i></a>
+            <a href="mailto:ceo@peakseo.online" class="w-14 h-14 rounded flex items-center justify-center text-white text-xl hover:scale-110 transition" style="background:#B91C3C;"><i class="fas fa-envelope"></i></a>
             <a href="contact.html" class="main-btn ml-2">Work With Me</a>
           </div>
         </div>
@@ -258,9 +259,9 @@
 <section class="py-20 px-6 bg-white text-gray-900">
   <div class="max-w-7xl mx-auto">
     <div class="text-center mb-14">
-      <p class="uppercase tracking-[3px] text-sm font-bold champagne-text mb-3">Our Premium Services</p>
+      <p class="uppercase tracking-[3px] text-sm font-bold gold-text mb-3">Our Premium Services</p>
       <h2 class="text-4xl md:text-5xl font-semibold mb-4 deep-text display">
-        SEO Services Built For <span class="rose-text">Authority Growth</span>
+        SEO Services Built For <span class="crimson-text">Authority Growth</span>
       </h2>
       <p class="text-gray-600 max-w-3xl mx-auto">
         Complete off-page SEO, guest posting, content and backlink solutions to grow trust, rankings and organic traffic.
@@ -281,11 +282,11 @@
 <section class="dark-bg py-20 px-6">
   <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
     <div>
-      <p class="uppercase tracking-[3px] text-sm font-bold champagne-text mb-4">Why Choose PeakSEO</p>
+      <p class="uppercase tracking-[3px] text-sm font-bold gold-text mb-4">Why Choose PeakSEO</p>
       <h2 class="text-4xl md:text-5xl font-semibold mb-6 ivory-text display">
-        We Build Links That Support <span class="champagne-text">Real SEO Growth</span>
+        We Build Links That Support <span class="gold-text">Real SEO Growth</span>
       </h2>
-      <p class="text-[#E7DED6] mb-7 leading-8">
+      <p class="text-[#D8DEE9] mb-7 leading-8">
         We focus on relevant websites, real traffic, clean metrics, natural anchor strategy and transparent link placement reports.
       </p>
 
@@ -300,8 +301,8 @@
     </div>
 
     <div class="glass-dark rounded p-8">
-      <h3 class="text-2xl font-semibold mb-5 champagne-text display">Placement Quality Checklist</h3>
-      <ul class="space-y-4 text-[#E7DED6]">
+      <h3 class="text-2xl font-semibold mb-5 gold-text display">Placement Quality Checklist</h3>
+      <ul class="space-y-4 text-[#D8DEE9]">
         <li>✔ Website niche relevance</li>
         <li>✔ Organic traffic quality</li>
         <li>✔ DR / DA and authority signals</li>
@@ -317,35 +318,35 @@
   <div class="max-w-7xl mx-auto">
     <div class="text-center mb-14">
       <h2 class="text-4xl md:text-5xl font-semibold mb-4 deep-text display">
-        Simple <span class="rose-text">Work Process</span>
+        Simple <span class="crimson-text">Work Process</span>
       </h2>
-      <p class="text-[#3A3038] max-w-3xl mx-auto">
+      <p class="text-[#2C3E5C] max-w-3xl mx-auto">
         A clear process for guest posting, link building, SEO audit and authority growth.
       </p>
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-5 text-center">
-      <div class="glass-card rounded p-6"><div class="text-3xl font-semibold rose-text mb-3 display">01</div><h3 class="font-bold mb-2">Audit</h3><p class="text-sm text-gray-600">We review your website.</p></div>
-      <div class="glass-card rounded p-6"><div class="text-3xl font-semibold rose-text mb-3 display">02</div><h3 class="font-bold mb-2">Strategy</h3><p class="text-sm text-gray-600">We plan links and anchors.</p></div>
-      <div class="glass-card rounded p-6"><div class="text-3xl font-semibold rose-text mb-3 display">03</div><h3 class="font-bold mb-2">Outreach</h3><p class="text-sm text-gray-600">We find quality websites.</p></div>
-      <div class="glass-card rounded p-6"><div class="text-3xl font-semibold rose-text mb-3 display">04</div><h3 class="font-bold mb-2">Content</h3><p class="text-sm text-gray-600">We create SEO content.</p></div>
-      <div class="glass-card rounded p-6"><div class="text-3xl font-semibold rose-text mb-3 display">05</div><h3 class="font-bold mb-2">Placement</h3><p class="text-sm text-gray-600">Links go live.</p></div>
-      <div class="glass-card rounded p-6"><div class="text-3xl font-semibold rose-text mb-3 display">06</div><h3 class="font-bold mb-2">Report</h3><p class="text-sm text-gray-600">You receive URLs.</p></div>
+      <div class="glass-card rounded p-6"><div class="text-3xl font-semibold crimson-text mb-3 display">01</div><h3 class="font-bold mb-2">Audit</h3><p class="text-sm text-gray-600">We review your website.</p></div>
+      <div class="glass-card rounded p-6"><div class="text-3xl font-semibold crimson-text mb-3 display">02</div><h3 class="font-bold mb-2">Strategy</h3><p class="text-sm text-gray-600">We plan links and anchors.</p></div>
+      <div class="glass-card rounded p-6"><div class="text-3xl font-semibold crimson-text mb-3 display">03</div><h3 class="font-bold mb-2">Outreach</h3><p class="text-sm text-gray-600">We find quality websites.</p></div>
+      <div class="glass-card rounded p-6"><div class="text-3xl font-semibold crimson-text mb-3 display">04</div><h3 class="font-bold mb-2">Content</h3><p class="text-sm text-gray-600">We create SEO content.</p></div>
+      <div class="glass-card rounded p-6"><div class="text-3xl font-semibold crimson-text mb-3 display">05</div><h3 class="font-bold mb-2">Placement</h3><p class="text-sm text-gray-600">Links go live.</p></div>
+      <div class="glass-card rounded p-6"><div class="text-3xl font-semibold crimson-text mb-3 display">06</div><h3 class="font-bold mb-2">Report</h3><p class="text-sm text-gray-600">You receive URLs.</p></div>
     </div>
   </div>
 </section>
 
 <section class="py-20 px-6">
-  <div class="max-w-6xl mx-auto p-10 md:p-14 text-center rounded" style="background:linear-gradient(135deg,#0D0D12,#B76E79);color:#FAF7F2;">
+  <div class="max-w-6xl mx-auto p-10 md:p-14 text-center rounded" style="background:linear-gradient(135deg,#0B1E3D,#B91C3C);color:#F4F6FA;">
     <h2 class="text-4xl md:text-5xl font-semibold mb-5 display">Ready To Improve Your Website Authority?</h2>
     <p class="text-lg max-w-3xl mx-auto mb-8 font-medium">
       Share your website URL and target keywords. We will suggest the best guest posting, link building or SEO growth strategy.
     </p>
 
     <div class="flex justify-center gap-4 flex-wrap">
-      <a href="contact.html" class="bg-[#161418] text-white px-8 py-4 rounded font-bold hover:scale-105 transition">Contact Us</a>
-      <a href="services.html" class="bg-white text-[#161418] px-8 py-4 rounded font-bold hover:scale-105 transition">View Services</a>
-      <a href="FAQs.html" class="bg-[#161418]/80 text-white px-8 py-4 rounded font-bold hover:scale-105 transition">Read FAQ</a>
+      <a href="contact.html" class="bg-[#081530] text-white px-8 py-4 rounded font-bold hover:scale-105 transition">Contact Us</a>
+      <a href="services.html" class="bg-white text-[#0B1E3D] px-8 py-4 rounded font-bold hover:scale-105 transition">View Services</a>
+      <a href="FAQs.html" class="text-white px-8 py-4 rounded font-bold hover:scale-105 transition" style="background:rgba(8,21,48,.85);">Read FAQ</a>
     </div>
   </div>
 </section>
@@ -353,25 +354,25 @@
 <div class="floating-contact">
   <div class="contact-options">
     <a href="https://wa.me/923074646927" target="_blank" class="float-btn" style="background:#25D366;"><i class="fab fa-whatsapp text-2xl"></i></a>
-    <a href="mailto:ceo@peakseo.online" class="float-btn" style="background:#B76E79;"><i class="fas fa-envelope text-2xl"></i></a>
+    <a href="mailto:ceo@peakseo.online" class="float-btn" style="background:#B91C3C;"><i class="fas fa-envelope text-2xl"></i></a>
     <a href="https://t.me/Nadeemmayos" target="_blank" class="float-btn" style="background:#229ED9;"><i class="fab fa-telegram-plane text-2xl"></i></a>
     <a href="https://www.linkedin.com/in/menadeemmayo/" target="_blank" class="float-btn" style="background:#0077B5;"><i class="fab fa-linkedin-in text-2xl"></i></a>
-    <a href="https://x.com/Nadeem_seo" target="_blank" class="float-btn" style="background:#0D0D12;"><i class="fab fa-x-twitter text-2xl"></i></a>
+    <a href="https://x.com/Nadeem_seo" target="_blank" class="float-btn" style="background:#081530;"><i class="fab fa-x-twitter text-2xl"></i></a>
   </div>
-  <button class="text-[#161418] w-16 h-16 rounded flex items-center justify-center shadow-2xl hover:rotate-12 transition" style="background:#C9A66B;">
+  <button class="text-[#0B1E3D] w-16 h-16 rounded flex items-center justify-center shadow-2xl hover:rotate-12 transition" style="background:#D4AF37;">
     <i class="fas fa-comments text-3xl"></i>
   </button>
 </div>
 
-<footer class="pt-16 pb-8 px-6 text-white" style="background:#0D0D12;border-top:1px solid rgba(201,166,107,.22);">
-  <div class="max-w-7xl mx-auto grid md:grid-cols-4 gap-10 border-b pb-12" style="border-color:rgba(201,166,107,.12);">
+<footer class="pt-16 pb-8 px-6 text-white" style="background:#081530;border-top:1px solid rgba(212,175,55,.22);">
+  <div class="max-w-7xl mx-auto grid md:grid-cols-4 gap-10 border-b pb-12" style="border-color:rgba(212,175,55,.12);">
 
     <div>
-      <h3 class="text-2xl font-semibold mb-5 display">PEAK<span class="rose-text">SEO</span></h3>
-      <p class="text-[#E7DED6] mb-5">Premium guest posting, link building, niche edits and authority backlink services for businesses worldwide.</p>
+      <h3 class="text-2xl font-semibold mb-5 display">PEAK<span class="crimson-text">SEO</span></h3>
+      <p class="text-[#D8DEE9] mb-5">Premium guest posting, link building, niche edits and authority backlink services for businesses worldwide.</p>
 
       <div class="flex gap-4 text-2xl mb-5">
-        <a href="https://www.linkedin.com/in/menadeemmayo" target="_blank" class="hover:text-[#C9A66B]"><i class="fab fa-linkedin"></i></a>
+        <a href="https://www.linkedin.com/in/menadeemmayo" target="_blank" class="hover:text-[#D4AF37]"><i class="fab fa-linkedin"></i></a>
         <a href="https://wa.me/923074646927" target="_blank" class="hover:text-green-400"><i class="fab fa-whatsapp"></i></a>
         <a href="https://t.me/Nadeemmayos" target="_blank" class="hover:text-sky-400"><i class="fab fa-telegram"></i></a>
         <a href="https://www.facebook.com/share/19aDt6pcgh/" target="_blank" class="hover:text-blue-400"><i class="fab fa-facebook"></i></a>
@@ -385,34 +386,34 @@
     </div>
 
     <div>
-      <h3 class="text-xl font-bold mb-5 champagne-text">Quick Links</h3>
-      <ul class="text-[#E7DED6] space-y-3">
-        <li><a href="services.html" class="hover:text-[#C9A66B]">Services</a></li>
-        <li><a href="portfolio.html" class="hover:text-[#C9A66B]">Portfolio</a></li>
-        <li><a href="all-niches-sites.html" class="hover:text-[#C9A66B]">All Niches</a></li>
-        <li><a href="blog.html" class="hover:text-[#C9A66B]">Blog</a></li>
-        <li><a href="FAQs.html" class="hover:text-[#C9A66B]">FAQ</a></li>
-        <li><a href="contact.html" class="hover:text-[#C9A66B]">Order Now</a></li>
+      <h3 class="text-xl font-bold mb-5 gold-text">Quick Links</h3>
+      <ul class="text-[#D8DEE9] space-y-3">
+        <li><a href="services.html" class="hover:text-[#D4AF37]">Services</a></li>
+        <li><a href="portfolio.html" class="hover:text-[#D4AF37]">Portfolio</a></li>
+        <li><a href="all-niches-sites.html" class="hover:text-[#D4AF37]">All Niches</a></li>
+        <li><a href="blog.html" class="hover:text-[#D4AF37]">Blog</a></li>
+        <li><a href="FAQs.html" class="hover:text-[#D4AF37]">FAQ</a></li>
+        <li><a href="contact.html" class="hover:text-[#D4AF37]">Order Now</a></li>
       </ul>
     </div>
 
     <div>
-      <h3 class="text-xl font-bold mb-5 champagne-text">Legal</h3>
-      <ul class="text-[#E7DED6] space-y-3">
-        <li><a href="privacy-policy.html" class="hover:text-[#C9A66B]">Privacy Policy</a></li>
-        <li><a href="terms-of-use.html" class="hover:text-[#C9A66B]">Terms of Use</a></li>
-        <li><a href="refund-policy.html" class="hover:text-[#C9A66B]">Refund Policy</a></li>
+      <h3 class="text-xl font-bold mb-5 gold-text">Legal</h3>
+      <ul class="text-[#D8DEE9] space-y-3">
+        <li><a href="privacy-policy.html" class="hover:text-[#D4AF37]">Privacy Policy</a></li>
+        <li><a href="terms-of-use.html" class="hover:text-[#D4AF37]">Terms of Use</a></li>
+        <li><a href="refund-policy.html" class="hover:text-[#D4AF37]">Refund Policy</a></li>
       </ul>
     </div>
 
     <div>
-      <h3 class="text-xl font-bold mb-5 champagne-text">Contact Info</h3>
+      <h3 class="text-xl font-bold mb-5 gold-text">Contact Info</h3>
 
-      <p class="text-[#E7DED6] mb-3"><i class="fas fa-envelope mr-2 champagne-text"></i><a href="mailto:ceo@peakseo.online" class="hover:text-[#C9A66B]">ceo@peakseo.online</a></p>
-      <p class="text-[#E7DED6] mb-3"><i class="fas fa-envelope mr-2 champagne-text"></i><a href="mailto:nadeemonlin@gmail.com" class="hover:text-[#C9A66B]">nadeemonlin@gmail.com</a></p>
-      <p class="text-[#E7DED6] mb-6"><i class="fab fa-whatsapp mr-2 champagne-text"></i><a href="https://wa.me/923074646927" target="_blank" class="hover:text-green-400">+92 307 4646927</a></p>
+      <p class="text-[#D8DEE9] mb-3"><i class="fas fa-envelope mr-2 gold-text"></i><a href="mailto:ceo@peakseo.online" class="hover:text-[#D4AF37]">ceo@peakseo.online</a></p>
+      <p class="text-[#D8DEE9] mb-3"><i class="fas fa-envelope mr-2 gold-text"></i><a href="mailto:nadeemonlin@gmail.com" class="hover:text-[#D4AF37]">nadeemonlin@gmail.com</a></p>
+      <p class="text-[#D8DEE9] mb-6"><i class="fab fa-whatsapp mr-2 gold-text"></i><a href="https://wa.me/923074646927" target="_blank" class="hover:text-green-400">+92 307 4646927</a></p>
 
-      <p class="text-xs font-bold uppercase text-[#B3A69C] mb-3 tracking-widest">We Accept</p>
+      <p class="text-xs font-bold uppercase text-[#9AA6BB] mb-3 tracking-widest">We Accept</p>
       <div class="flex flex-wrap gap-3 items-center">
         <img src="https://img.icons8.com/color/96/paypal.png" alt="PayPal" class="h-7">
         <img src="https://img.icons8.com/color/96/payoneer.png" alt="Payoneer" class="h-7">
@@ -423,7 +424,7 @@
 
   </div>
 
-  <p class="text-center mt-8 text-[#B3A69C] text-sm">© 2026 PeakSEO Agency. All Rights Reserved.</p>
+  <p class="text-center mt-8 text-[#9AA6BB] text-sm">© 2026 PeakSEO Agency. All Rights Reserved.</p>
 </footer>
 
 <script>
