@@ -1,1 +1,4 @@
-h
+User-agent: *
+Allow: /
+
+Sitemap: https://peakseo.online/sitemap.xml
