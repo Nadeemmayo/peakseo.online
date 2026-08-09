@@ -1,0 +1,487 @@
+Enter---
+layout: null
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>{{ page.title }} | PeakSEO</title>
+  <meta name="description" content="{{ page.description | escape }}">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+
+  <link rel="canonical" href="{{ page.url | absolute_url }}">
+
+  <link
+    rel="icon"
+    href="https://cdn-icons-png.flaticon.com/512/2942/2942813.png"
+    type="image/png"
+  >
+
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="PeakSEO">
+  <meta property="og:title" content="{{ page.title | escape }}">
+  <meta property="og:description" content="{{ page.description | escape }}">
+  <meta property="og:url" content="{{ page.url | absolute_url }}">
+
+  {% if page.thumbnail %}
+  <meta property="og:image" content="{{ page.thumbnail | absolute_url }}">
+  {% else %}
+  <meta property="og:image" content="https://peakseo.online/preview.jpg">
+  {% endif %}
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ page.title | escape }}">
+  <meta name="twitter:description" content="{{ page.description | escape }}">
+
+  {% if page.thumbnail %}
+  <meta name="twitter:image" content="{{ page.thumbnail | absolute_url }}">
+  {% else %}
+  <meta name="twitter:image" content="https://peakseo.online/preview.jpg">
+  {% endif %}
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  >
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: #4A0E0E;
+      color: #FDF4E3;
+      font-family: "Manrope", sans-serif;
+      overflow-x: hidden;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    .display {
+      font-family: "Cormorant Garamond", serif;
+    }
+
+    .gold-text {
+      color: #FFC93C;
+    }
+
+    .ivory-text {
+      color: #FDF4E3;
+    }
+
+    .logo-mark {
+      width: 44px;
+      height: 44px;
+      border-radius: 4px;
+      background: linear-gradient(135deg, #E63946, #FFC93C);
+      color: #2B0808;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      margin-right: 10px;
+      font-family: "Cormorant Garamond", serif;
+      font-size: 19px;
+    }
+
+    .main-btn {
+      background: linear-gradient(135deg, #E63946, #FFC93C);
+      color: #2B0808;
+      font-weight: 800;
+      border-radius: 4px;
+      padding: 14px 30px;
+      display: inline-block;
+      transition: 0.3s;
+      box-shadow: 0 16px 35px rgba(230, 57, 70, 0.35);
+    }
+
+    .main-btn:hover {
+      transform: scale(1.05);
+    }
+
+    .article-hero {
+      background:
+        radial-gradient(
+          circle at top left,
+          rgba(255, 201, 60, 0.18),
+          transparent 32%
+        ),
+        radial-gradient(
+          circle at bottom right,
+          rgba(230, 57, 70, 0.22),
+          transparent 38%
+        ),
+        linear-gradient(
+          135deg,
+          #4A0E0E 0%,
+          #5C1414 45%,
+          #3A0A0A 100%
+        );
+    }
+
+    .article-body {
+      color: #E8CFAE;
+      font-size: 17px;
+      line-height: 1.9;
+    }
+
+    .article-body h2 {
+      color: #FFC93C;
+      font-size: 34px;
+      font-weight: 600;
+      margin-top: 42px;
+      margin-bottom: 16px;
+      line-height: 1.2;
+    }
+
+    .article-body h3 {
+      color: #FDF4E3;
+      font-size: 26px;
+      font-weight: 600;
+      margin-top: 32px;
+      margin-bottom: 14px;
+    }
+
+    .article-body p {
+      margin-bottom: 20px;
+    }
+
+    .article-body ul,
+    .article-body ol {
+      margin: 20px 0;
+      padding-left: 28px;
+    }
+
+    .article-body ul {
+      list-style: disc;
+    }
+
+    .article-body ol {
+      list-style: decimal;
+    }
+
+    .article-body li {
+      margin-bottom: 10px;
+    }
+
+    .article-body a {
+      color: #FFC93C;
+      text-decoration: underline;
+    }
+
+    .article-body strong {
+      color: #FDF4E3;
+    }
+
+    .article-body blockquote {
+      margin: 30px 0;
+      padding: 20px 24px;
+      background: rgba(255, 201, 60, 0.06);
+      border-left: 4px solid #FFC93C;
+      color: #FDF4E3;
+    }
+
+    .article-body img {
+      width: 100%;
+      height: auto;
+      margin: 30px 0;
+      border-radius: 8px;
+    }
+
+    .featured-image {
+      width: 100%;
+      max-height: 520px;
+      object-fit: cover;
+      border-radius: 10px;
+      border: 1px solid rgba(255, 201, 60, 0.22);
+    }
+
+    .category-pill {
+      display: inline-block;
+      background: rgba(255, 201, 60, 0.15);
+      color: #FFC93C;
+      padding: 7px 14px;
+      border-radius: 4px;
+      font-size: 11px;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .mobile-menu {
+      display: none;
+    }
+
+    .mobile-menu.active {
+      display: block;
+    }
+
+    @media (max-width: 768px) {
+      .desktop-menu {
+        display: none !important;
+      }
+
+      .mobile-menu {
+        background: #4A0E0E;
+        padding: 18px 24px;
+        border-top: 1px solid rgba(255, 201, 60, 0.22);
+      }
+
+      .mobile-menu a {
+        display: block;
+        padding: 12px 0;
+        color: #FDF4E3;
+        font-weight: bold;
+        text-transform: uppercase;
+        font-size: 13px;
+        border-bottom: 1px solid rgba(255, 201, 60, 0.14);
+      }
+
+      .article-body {
+        font-size: 16px;
+      }
+
+      .article-body h2 {
+        font-size: 29px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVIGATION -->
+
+  <nav
+    class="sticky top-0 z-50 backdrop-blur-xl border-b"
+    style="
+      background: rgba(74,14,14,.92);
+      border-color: rgba(255,201,60,.22);
+    "
+  >
+    <div class="max-w-7xl mx-auto flex justify-between items-center p-4">
+
+      <a
+        href="{{ '/' | relative_url }}"
+        class="text-2xl font-semibold flex items-center display ivory-text"
+      >
+        <span class="logo-mark">P</span>
+        PEAK<span class="gold-text">SEO</span>
+      </a>
+
+      <div
+        class="desktop-menu hidden md:flex gap-5 font-bold text-xs uppercase items-center"
+      >
+        <a href="{{ '/' | relative_url }}" class="ivory-text hover:text-[#FFC93C] transition">Home</a>
+        <a href="{{ '/about.html' | relative_url }}" class="ivory-text hover:text-[#FFC93C] transition">About</a>
+        <a href="{{ '/services.html' | relative_url }}" class="ivory-text hover:text-[#FFC93C] transition">Services</a>
+        <a href="{{ '/portfolio.html' | relative_url }}" class="ivory-text hover:text-[#FFC93C] transition">Portfolio</a>
+        <a href="{{ '/all-niches-sites.html' | relative_url }}" class="ivory-text hover:text-[#FFC93C] transition">All Niches</a>
+        <a href="{{ '/blog.html' | relative_url }}" class="gold-text">Blog</a>
+        <a href="{{ '/FAQs.html' | relative_url }}" class="ivory-text hover:text-[#FFC93C] transition">FAQ</a>
+        <a href="{{ '/contact.html' | relative_url }}" class="main-btn text-sm px-5 py-2">Contact</a>
+      </div>
+
+      <button
+        class="mobile-menu-btn ivory-text text-3xl md:hidden"
+        type="button"
+        aria-label="Open navigation menu"
+        aria-expanded="false"
+      >
+        <i class="fas fa-bars"></i>
+      </button>
+
+    </div>
+
+    <div class="mobile-menu">
+      <a href="{{ '/' | relative_url }}">Home</a>
+      <a href="{{ '/about.html' | relative_url }}">About</a>
+      <a href="{{ '/services.html' | relative_url }}">Services</a>
+      <a href="{{ '/portfolio.html' | relative_url }}">Portfolio</a>
+      <a href="{{ '/all-niches-sites.html' | relative_url }}">All Niches</a>
+      <a href="{{ '/blog.html' | relative_url }}" class="gold-text">Blog</a>
+      <a href="{{ '/FAQs.html' | relative_url }}">FAQ</a>
+      <a href="{{ '/contact.html' | relative_url }}">Contact</a>
+    </div>
+  </nav>
+
+  <!-- ARTICLE HERO -->
+
+  <header class="article-hero py-20 px-6">
+
+    <div class="max-w-4xl mx-auto text-center">
+
+      {% if page.category %}
+      <span class="category-pill">
+        {{ page.category }}
+      </span>
+      {% endif %}
+
+      <h1
+        class="text-4xl md:text-6xl font-semibold leading-tight mt-6 mb-6 ivory-text display"
+      >
+        {{ page.title }}
+      </h1>
+
+      {% if page.description %}
+      <p
+        class="text-[#F0DFC4] text-lg md:text-xl max-w-3xl mx-auto leading-8"
+      >
+        {{ page.description }}
+      </p>
+      {% endif %}
+
+      {% if page.date %}
+      <p class="text-[#C79A6B] text-sm mt-6">
+        {{ page.date | date: "%B %d, %Y" }}
+      </p>
+      {% endif %}
+
+    </div>
+
+  </header>
+
+  <!-- ARTICLE -->
+
+  <main
+    class="py-16 px-6"
+    style="background: #3A0A0A;"
+  >
+
+    <article class="max-w-4xl mx-auto">
+
+      {% if page.thumbnail %}
+      <div class="mb-12">
+        <img
+          src="{{ page.thumbnail | relative_url }}"
+          alt="{{ page.thumbnail_alt | default: page.title | escape }}"
+          class="featured-image"
+        >
+      </div>
+      {% endif %}
+
+      <div class="article-body">
+        {{ content }}
+      </div>
+
+    </article>
+
+  </main>
+
+  <!-- CTA -->
+
+  <section class="py-16 px-6" style="background:#4A0E0E;">
+
+    <div
+      class="max-w-5xl mx-auto p-10 text-center rounded"
+      style="background:linear-gradient(135deg,#E63946,#FFC93C);"
+    >
+
+      <h2
+        class="text-3xl md:text-4xl font-semibold mb-5 display"
+        style="color:#2B0808;"
+      >
+        Need Help Growing Your Search Authority?
+      </h2>
+
+      <p
+        class="max-w-2xl mx-auto mb-7 font-medium"
+        style="color:#3A0A0A;"
+      >
+        Build stronger search visibility with PeakSEO guest posting,
+        link building, niche edits and professional off-page SEO.
+      </p>
+
+      <a
+        href="{{ '/contact.html' | relative_url }}"
+        class="px-8 py-4 rounded font-bold inline-block"
+        style="background:#2B0808;color:#FFC93C;"
+      >
+        Get Free Consultation
+      </a>
+
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+
+  <footer
+    class="py-8 px-6 text-center"
+    style="
+      background:#2B0808;
+      border-top:1px solid rgba(255,201,60,.25);
+    "
+  >
+
+    <p class="font-semibold text-lg display ivory-text">
+      PEAK<span class="gold-text">SEO</span>
+    </p>
+
+    <p class="text-[#E8CFAE] text-sm mt-2">
+      Guest Posting • Link Building • Niche Edits • SEO Insights
+    </p>
+
+    <p class="text-[#C79A6B] text-sm mt-4">
+      © 2026 PeakSEO Agency. All Rights Reserved.
+    </p>
+
+  </footer>
+
+  <script>
+    const menuBtn = document.querySelector(".mobile-menu-btn");
+    const mobileMenu = document.querySelector(".mobile-menu");
+
+    if (menuBtn && mobileMenu) {
+      menuBtn.addEventListener("click", function () {
+        mobileMenu.classList.toggle("active");
+
+        const isOpen = mobileMenu.classList.contains("active");
+
+        menuBtn.setAttribute(
+          "aria-expanded",
+          String(isOpen)
+        );
+
+        const icon = menuBtn.querySelector("i");
+
+        if (icon) {
+          icon.className = isOpen
+            ? "fas fa-xmark"
+            : "fas fa-bars";
+        }
+      });
+
+      mobileMenu
+        .querySelectorAll("a")
+        .forEach(function (link) {
+          link.addEventListener("click", function () {
+            mobileMenu.classList.remove("active");
+            menuBtn.setAttribute("aria-expanded", "false");
+
+            const icon = menuBtn.querySelector("i");
+
+            if (icon) {
+              icon.className = "fas fa-bars";
+            }
+          });
+        });
+    }
+  </script>
+
+</body>
+    </html>
