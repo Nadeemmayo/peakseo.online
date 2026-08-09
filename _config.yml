@@ -1,0 +1,11 @@
+title: PeakSEO
+description: Premium SEO Agency for Guest Posting, Link Building, Niche Edits and Off-Page SEO
+url: "https://peakseo.online"
+baseurl: ""
+
+permalink: /blog/:title.html
+
+markdown: kramdown
+
+exclude:
+  - README.md
