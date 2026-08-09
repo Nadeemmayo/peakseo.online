@@ -2,7 +2,7 @@ backend:
   name: github
   repo: Nadeemmayo/peakseo.online
   branch: main
-  base_url: YOUR_PEAKSEO_AUTH_WORKER_URL
+  base_url: https://linkliftpro-cms-auth.seoinfo89.workers.dev
   auth_endpoint: auth
 
 site_url: https://peakseo.online
